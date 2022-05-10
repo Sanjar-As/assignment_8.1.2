@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B85A30032828E73B00FD3664 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = B85A30022828E73B00FD3664 /* SDWebImageSwiftUI */; };
 		B8824BE328252A3F00E3D522 /* module_8_1_2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8824BE228252A3F00E3D522 /* module_8_1_2App.swift */; };
 		B8824BE528252A3F00E3D522 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8824BE428252A3F00E3D522 /* ContentView.swift */; };
 		B8824BE728252A4100E3D522 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8824BE628252A4100E3D522 /* Assets.xcassets */; };
 		B8824BEA28252A4100E3D522 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8824BE928252A4100E3D522 /* Preview Assets.xcassets */; };
 		B8824BEC28252A4100E3D522 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8824BEB28252A4100E3D522 /* Persistence.swift */; };
 		B8824BEF28252A4100E3D522 /* module_8_1_2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B8824BED28252A4100E3D522 /* module_8_1_2.xcdatamodeld */; };
+		B8824BF928252A7900E3D522 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8824BF828252A7900E3D522 /* MainView.swift */; };
+		B8824BFD28252E9900E3D522 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8824BFC28252E9900E3D522 /* Data.swift */; };
+		B8824C0228252ECE00E3D522 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8824C0128252ECE00E3D522 /* Network.swift */; };
+		B8824C082825367E00E3D522 /* GithubAPI in Frameworks */ = {isa = PBXBuildFile; productRef = B8824C072825367E00E3D522 /* GithubAPI */; };
+		B898BB41282A0EE1007C594F /* AsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B898BB40282A0EE1007C594F /* AsyncImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +29,10 @@
 		B8824BE928252A4100E3D522 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B8824BEB28252A4100E3D522 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		B8824BEE28252A4100E3D522 /* module_8_1_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = module_8_1_2.xcdatamodel; sourceTree = "<group>"; };
+		B8824BF828252A7900E3D522 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		B8824BFC28252E9900E3D522 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		B8824C0128252ECE00E3D522 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		B898BB40282A0EE1007C594F /* AsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B85A30032828E73B00FD3664 /* SDWebImageSwiftUI in Frameworks */,
+				B8824C082825367E00E3D522 /* GithubAPI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,11 +67,12 @@
 		B8824BE128252A3F00E3D522 /* module_8.1.2 */ = {
 			isa = PBXGroup;
 			children = (
-				B8824BE228252A3F00E3D522 /* module_8_1_2App.swift */,
-				B8824BE428252A3F00E3D522 /* ContentView.swift */,
-				B8824BE628252A4100E3D522 /* Assets.xcassets */,
-				B8824BEB28252A4100E3D522 /* Persistence.swift */,
+				B898BB0A2829FC4A007C594F /* Views */,
+				B8824BFE28252EA200E3D522 /* Models */,
+				B8824BFF28252EAB00E3D522 /* Network */,
 				B8824BED28252A4100E3D522 /* module_8_1_2.xcdatamodeld */,
+				B898BB34282A0B52007C594F /* App */,
+				B8824BF528252A4A00E3D522 /* App-Utilities */,
 				B8824BE828252A4100E3D522 /* Preview Content */,
 			);
 			path = module_8.1.2;
@@ -71,6 +84,49 @@
 				B8824BE928252A4100E3D522 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B8824BF528252A4A00E3D522 /* App-Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				B8824BE628252A4100E3D522 /* Assets.xcassets */,
+				B8824BE428252A3F00E3D522 /* ContentView.swift */,
+			);
+			path = "App-Utilities";
+			sourceTree = "<group>";
+		};
+		B8824BFE28252EA200E3D522 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8824BFC28252E9900E3D522 /* Data.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B8824BFF28252EAB00E3D522 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B8824C0128252ECE00E3D522 /* Network.swift */,
+				B898BB40282A0EE1007C594F /* AsyncImage.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B898BB0A2829FC4A007C594F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8824BF828252A7900E3D522 /* MainView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B898BB34282A0B52007C594F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B8824BEB28252A4100E3D522 /* Persistence.swift */,
+				B8824BE228252A3F00E3D522 /* module_8_1_2App.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +145,10 @@
 			dependencies = (
 			);
 			name = module_8.1.2;
+			packageProductDependencies = (
+				B8824C072825367E00E3D522 /* GithubAPI */,
+				B85A30022828E73B00FD3664 /* SDWebImageSwiftUI */,
+			);
 			productName = module_8.1.2;
 			productReference = B8824BDF28252A3F00E3D522 /* module_8.1.2.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +177,10 @@
 				Base,
 			);
 			mainGroup = B8824BD628252A3F00E3D522;
+			packageReferences = (
+				B8824C062825367E00E3D522 /* XCRemoteSwiftPackageReference "GithubAPI" */,
+				B85A30012828E73B00FD3664 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = B8824BE028252A3F00E3D522 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,9 +208,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8824BEC28252A4100E3D522 /* Persistence.swift in Sources */,
+				B8824C0228252ECE00E3D522 /* Network.swift in Sources */,
 				B8824BE528252A3F00E3D522 /* ContentView.swift in Sources */,
 				B8824BE328252A3F00E3D522 /* module_8_1_2App.swift in Sources */,
+				B898BB41282A0EE1007C594F /* AsyncImage.swift in Sources */,
+				B8824BF928252A7900E3D522 /* MainView.swift in Sources */,
 				B8824BEF28252A4100E3D522 /* module_8_1_2.xcdatamodeld in Sources */,
+				B8824BFD28252E9900E3D522 /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +415,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B85A30012828E73B00FD3664 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		B8824C062825367E00E3D522 /* XCRemoteSwiftPackageReference "GithubAPI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/serhii-londar/GithubAPI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B85A30022828E73B00FD3664 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B85A30012828E73B00FD3664 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		B8824C072825367E00E3D522 /* GithubAPI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B8824C062825367E00E3D522 /* XCRemoteSwiftPackageReference "GithubAPI" */;
+			productName = GithubAPI;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		B8824BED28252A4100E3D522 /* module_8_1_2.xcdatamodeld */ = {
